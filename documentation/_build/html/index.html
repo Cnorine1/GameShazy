@@ -1,0 +1,787 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to Day0 - Another Raiden Clone’s documentation! &#8212; Day0 - Another Raiden Clone  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-day0-another-raiden-clone-s-documentation">
+<h1>Welcome to Day0 - Another Raiden Clone’s documentation!<a class="headerlink" href="#welcome-to-day0-another-raiden-clone-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<span class="target" id="module-GUI"></span><dl class="class">
+<dt id="GUI.GUI">
+<em class="property">class </em><code class="descclassname">GUI.</code><code class="descname">GUI</code><a class="headerlink" href="#GUI.GUI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class controlling the entire window setting and game state setup of the game.</p>
+<dl class="method">
+<dt id="GUI.GUI.add_to_hs">
+<code class="descname">add_to_hs</code><span class="sig-paren">(</span><em>txt</em><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.add_to_hs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transitions to “add a high score” state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.ask_to_save">
+<code class="descname">ask_to_save</code><span class="sig-paren">(</span><em>health</em>, <em>shield</em>, <em>weapon</em>, <em>bombs</em>, <em>score</em>, <em>lives</em>, <em>time_of_save</em><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.ask_to_save" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes the “ask to save” state. Takes in all the parameters required to save the game via library’s saveGame() method.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.credits">
+<code class="descname">credits</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.credits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transition to the credits crawl.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.death_loop">
+<code class="descname">death_loop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.death_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes the “you died!” state. Captures the spacebar to get back into the game.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.game_intro">
+<code class="descname">game_intro</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.game_intro" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes game introduction state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.game_over">
+<code class="descname">game_over</code><span class="sig-paren">(</span><em>player_score</em><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.game_over" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes the game over screen. Mostly just a visual transition back to the main menu, since continuing is not an option.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.high_scores">
+<code class="descname">high_scores</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.high_scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transition to the high score crawl.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.level_complete">
+<code class="descname">level_complete</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.level_complete" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes visual transition from main() to main().</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.level_loop">
+<code class="descname">level_loop</code><span class="sig-paren">(</span><em>level=1</em>, <em>cheat_lives=False</em>, <em>cheat_weaps=False</em>, <em>toLoad=False</em><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.level_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Looper that ensures everything is set up for main(), while also allowing a loaded file to work correctly.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.main">
+<code class="descname">main</code><span class="sig-paren">(</span><em>lives_remaining</em>, <em>curr_score</em>, <em>currPlayerShip</em>, <em>currTime=0</em><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes main game state. Takes lives_remaining (lives remaining), curr_score (current score), currPlayerShip (a reference to the current player entity), and currTime (in seconds).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.menu">
+<code class="descname">menu</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main menu state. Allows use of the mouse and captures it for button clicky detection.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.pause_screen">
+<code class="descname">pause_screen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.pause_screen" title="Permalink to this definition">¶</a></dt>
+<dd><p>Invokes the pause screen state.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="GUI.GUI.victory">
+<code class="descname">victory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#GUI.GUI.victory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Transition to end of game “you win!” state.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-highscore"></span><dl class="class">
+<dt id="highscore.Scoreboard">
+<em class="property">class </em><code class="descclassname">highscore.</code><code class="descname">Scoreboard</code><a class="headerlink" href="#highscore.Scoreboard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linked List data structure that contains the High Score List for Day0.</p>
+<dl class="class">
+<dt id="highscore.Scoreboard.Entry">
+<em class="property">class </em><code class="descname">Entry</code><span class="sig-paren">(</span><em>name</em>, <em>score</em><span class="sig-paren">)</span><a class="headerlink" href="#highscore.Scoreboard.Entry" title="Permalink to this definition">¶</a></dt>
+<dd><p>Object representing a single entry within the overall Scoreboard class. Contains:
+name - Must be a string.
+score - Must be an integer.
+nextEntry - Must point to the next Entry object in the list (can be None).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="highscore.Scoreboard.add">
+<code class="descname">add</code><span class="sig-paren">(</span><em>name</em>, <em>score</em><span class="sig-paren">)</span><a class="headerlink" href="#highscore.Scoreboard.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>Adds an entry into the linked list sorted based on score. Assumes it “belongs” on the list already.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="highscore.Scoreboard.belongsOnList">
+<code class="descname">belongsOnList</code><span class="sig-paren">(</span><em>score</em><span class="sig-paren">)</span><a class="headerlink" href="#highscore.Scoreboard.belongsOnList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns true if the score is higher than the lowest score on the list. Requires a fully populated list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="highscore.Scoreboard.readFromFile">
+<code class="descname">readFromFile</code><span class="sig-paren">(</span><em>fileName</em><span class="sig-paren">)</span><a class="headerlink" href="#highscore.Scoreboard.readFromFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads in a file, breaks it down based on periods separating name and score and commas separating entries, and 
+automatically readds each entry into the list.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="highscore.Scoreboard.resetList">
+<code class="descname">resetList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#highscore.Scoreboard.resetList" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets the list by removing all contents, then readding dummy values to refill.
+Does __NOT__ write out the new list to disk, you must do that manually.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="highscore.Scoreboard.writeToFile">
+<code class="descname">writeToFile</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#highscore.Scoreboard.writeToFile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write the list out to file based on a simple delimiter scheme. Periods deliniate the name from the score,
+while commas deliniate between entries.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-Entity"></span><dl class="class">
+<dt id="Entity.Bomb">
+<em class="property">class </em><code class="descclassname">Entity.</code><code class="descname">Bomb</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em>, <em>speed</em>, <em>path_to_img</em>, <em>angle=0</em>, <em>behavior='bomb'</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Bomb" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Bomb class represents stage 1 of the bomb. During this stage, the bomb is launched by the player, and travels
+up the screen with a Movement behavior defined by -behavior, -speed, -angle. The bomb appears at -origin_x, -origin_y
+typically near the playerShip. During stage 1, the bomb travels up the screen and a bomb drop sound effect is played.</p>
+<dl class="method">
+<dt id="Entity.Bomb.play_sound">
+<code class="descname">play_sound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Bomb.play_sound" title="Permalink to this definition">¶</a></dt>
+<dd><p>plays the bomb drop sound effect.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Bomb.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Bomb.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>if the bomb goes off the screen, it will be removed from the game. Try to launch your bombs with enough space for them to travel
+without going off the top of the screen.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Entity.BossSprite">
+<em class="property">class </em><code class="descclassname">Entity.</code><code class="descname">BossSprite</code><span class="sig-paren">(</span><em>origin</em>, <em>path_to_img</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.BossSprite" title="Permalink to this definition">¶</a></dt>
+<dd><p>The BosoSprite is a special type of enemy that the player encounters at the end of a level.
+This powerful foe has much more health than the typical enemy, as well as a shield.</p>
+<dl class="method">
+<dt id="Entity.BossSprite.move">
+<code class="descname">move</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.BossSprite.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>The BossSprite will move differently depending on which phase it is currently in.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.BossSprite.regen">
+<code class="descname">regen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.BossSprite.regen" title="Permalink to this definition">¶</a></dt>
+<dd><p>If the BossSprite has shield remaining, (shield &gt; 0), then it will regenerate shield much like the Player</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.BossSprite.take_damage">
+<code class="descname">take_damage</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.BossSprite.take_damage" title="Permalink to this definition">¶</a></dt>
+<dd><p>The BossSprite will take damage given by -value</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.BossSprite.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>player_center</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.BossSprite.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>the BossSprite has a complex update method, due to the fact that there are multiple phases of combat behavior
+that the BossSprite executes during a battle with the player. As the BossSprite loses health, it will enter
+the next phase, leading to more powerful attacks.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Entity.Bullet">
+<em class="property">class </em><code class="descclassname">Entity.</code><code class="descname">Bullet</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em>, <em>speed</em>, <em>path_to_img</em>, <em>acceleration=0</em>, <em>angle=0</em>, <em>behavior='up'</em>, <em>name=None</em>, <em>damage=1</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Bullet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bullets are entities that appear in a position given by -origin_x, -origin_y (typically the playerShip)
+then, they travel with a behavior given by -speed, -acceleration, -angle, -behavior. The name of the bullet is
+relevant in certain special cases where the GUI needs to make decisions on certain bullet types, so -name is used to pass
+the name of the Bullet in from Weapon in this scenario. Finally, bullets deal -damage on collision.</p>
+<dl class="method">
+<dt id="Entity.Bullet.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Bullet.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the Entity’s rect location while ensuring it remains within the window.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Bullet.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Bullet.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Every frame, the bullet has to move. This is handled here in the update method.
+In the case that the name of the bullet is waveBeam, it will expand as it moves, so that is handled here.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Entity.Enemy">
+<em class="property">class </em><code class="descclassname">Entity.</code><code class="descname">Enemy</code><span class="sig-paren">(</span><em>origin=[640, 0], imgFile='enemy.png', speed=1, behavior='diver', weapon='spitfire', health=1, acceleration=0, itemDropTable=(('coin', 0.1), ('spitfire_powerup', 0.01), ('wavebeam_powerup', 0.01), ('chargeShot_powerup', 0.01), ('healthpack', 0.1), ('bomb_item', 0.1)), angle=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Enemy" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Enemy class is similar to the Player class, but with several key differences. While both Player and Enemy extend
+the Entity class, Player has a control scheme that allows the player to control the ship, while Enemy’s execute
+pre-set behavior, found in the behaveDic. Additionally, the game screen has been divided into sectors, and enemies may
+appear from any of the allowed sectors, giving them their origin. Finally, when enemies are defeated, they may drop Items to pickup, as specified by their itemDropTable.
+For more information on item drops, see itemDropTables.py</p>
+<dl class="method">
+<dt id="Entity.Enemy.getDrop">
+<code class="descname">getDrop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Enemy.getDrop" title="Permalink to this definition">¶</a></dt>
+<dd><p>When an enemy’s health reaches 0, it is defeated and has a chance to drop items. The
+getDrop method calculates which Item, if any, is created on screen. See itemDropTables.py for more info.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Enemy.take_damage">
+<code class="descname">take_damage</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Enemy.take_damage" title="Permalink to this definition">¶</a></dt>
+<dd><p>health is lowered by -value.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Enemy.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Enemy.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>During the main game loop, the enemy sprites are updated. They may shoot bullets at the player by random chance.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Entity.Entity">
+<em class="property">class </em><code class="descclassname">Entity.</code><code class="descname">Entity</code><span class="sig-paren">(</span><em>origin=(0</em>, <em>0)</em>, <em>imageFile=None</em>, <em>area=None</em>, <em>acceleration=0</em>, <em>speed=0</em>, <em>angle=0</em>, <em>health=1</em>, <em>point_value=0</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entity is a broad class encompassing Enemies, the Player, Items, etc. All of these entities have certain characteristics
+such as a location given by -origin, an optional -imageFile that is used as the sprite image, an -acceleration, -speed, and -angle
+used in the case that the Entity’s movement is governed by the Move class, a -health which indicates how much damage it can take before
+being destroyed, and a -point_value that indicates how much the Entity will increase the Player’s score.</p>
+<dl class="method">
+<dt id="Entity.Entity.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Entity.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates the Entity’s rect location while ensuring it remains within the window.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Entity.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Entity.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>If not inside the window area, mark for removal.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Entity.updateSpeed">
+<code class="descname">updateSpeed</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Entity.updateSpeed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates self.speedX and self.speedY based on angle and acceleration.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Entity.Item">
+<em class="property">class </em><code class="descclassname">Entity.</code><code class="descname">Item</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em>, <em>speed=1</em>, <em>path_to_img='powerup.gif'</em>, <em>name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Item" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Item class represents items that are dropped by defeated enemies, and which the player can collect.
+Some items will give the player points, increasing the player’s score, while other items are weapon powerups,
+granting the player a new weapon or improving the player’s existing weapon. Additional items include healthpacks
+which restore health, as well as bomb items which increase the number of bombs the player can drop by 1.
+All items can be found in the MASTER_ITEMS dictionary in “library.py”</p>
+<dl class="method">
+<dt id="Entity.Item.checkBomb">
+<code class="descname">checkBomb</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Item.checkBomb" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper method that checks if the Item is a bomb item.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Item.checkHealthPack">
+<code class="descname">checkHealthPack</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Item.checkHealthPack" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper method that checks if the Item is a health pack, giving the player back health (red) not shield (blue).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Item.checkWeapon">
+<code class="descname">checkWeapon</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Item.checkWeapon" title="Permalink to this definition">¶</a></dt>
+<dd><p>helper method that checks if the Item is a weapon powerup.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Item.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>x</em>, <em>y</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Item.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>simple move method that moves the Item by x and y pixels.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Item.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Item.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>moves straight down at a given speed.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="Entity.Player">
+<em class="property">class </em><code class="descclassname">Entity.</code><code class="descname">Player</code><span class="sig-paren">(</span><em>init_wep</em>, <em>imgFile</em>, <em>scheme</em>, <em>init_bomb='bomb'</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Player" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Player Class inherits from Entity, and extends it by adding an -init_wep which is the Player’s
+initial Weapon object, -scheme which is the control scheme (keyboard controls), -init_bomb which is a special
+Weapon object.</p>
+<dl class="method">
+<dt id="Entity.Player.control">
+<code class="descname">control</code><span class="sig-paren">(</span><em>keys</em>, <em>FRAMERATE</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Player.control" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method defines the control scheme used to move the Player in game</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Player.drop_bomb">
+<code class="descname">drop_bomb</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Player.drop_bomb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Similar to the fire method, the drop_bomb method allows the Player to launch a bomb Weapon object.
+Refer to the bomb documentation in weapon.py for more info about bombs.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Player.fire">
+<code class="descname">fire</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Player.fire" title="Permalink to this definition">¶</a></dt>
+<dd><p>The fire method calls on the Player’s current Weapon object to return a Bullet. A Bullet contains all
+the necessary information for drawing a bullet sprite on the screen (GUI) as well as managing that sprite’s
+movement and damage.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Player.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>new_x</em>, <em>new_y</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Player.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>The move method allows the Player to move to a coordinates, given by -new_x and -new_y
+There is some bounds checking to ensure that the Player moves within the allowed area.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Player.regen">
+<code class="descname">regen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Player.regen" title="Permalink to this definition">¶</a></dt>
+<dd><p>The regen method allows the Player’s shield to regenerate as long as the current shield level is below the max shield attribute</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Player.take_damage">
+<code class="descname">take_damage</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Player.take_damage" title="Permalink to this definition">¶</a></dt>
+<dd><p>When a Player is hurt, the take_damage function is used to decrease the player’s health and shield</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="Entity.Player.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Entity.Player.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate explosions based on health on a per frame basis.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-explosion"></span><dl class="class">
+<dt id="explosion.ExplosionSprite">
+<em class="property">class </em><code class="descclassname">explosion.</code><code class="descname">ExplosionSprite</code><span class="sig-paren">(</span><em>startx</em>, <em>starty</em>, <em>direction='down'</em><span class="sig-paren">)</span><a class="headerlink" href="#explosion.ExplosionSprite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sprite for small explosions.</p>
+<dl class="method">
+<dt id="explosion.ExplosionSprite.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>diffx</em>, <em>diffy</em><span class="sig-paren">)</span><a class="headerlink" href="#explosion.ExplosionSprite.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move the rect by (diffx, diffy).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="explosion.ExplosionSprite.play_sound">
+<code class="descname">play_sound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#explosion.ExplosionSprite.play_sound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play sound.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="explosion.ExplosionSprite.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#explosion.ExplosionSprite.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update explosion frame counter, changing image if required, also moving the explosion “down” the screen.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-bomb_explosion"></span><dl class="class">
+<dt id="bomb_explosion.BombExplosion">
+<em class="property">class </em><code class="descclassname">bomb_explosion.</code><code class="descname">BombExplosion</code><span class="sig-paren">(</span><em>startx</em>, <em>starty</em><span class="sig-paren">)</span><a class="headerlink" href="#bomb_explosion.BombExplosion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sprite class for the large bomb explosions!.</p>
+<dl class="method">
+<dt id="bomb_explosion.BombExplosion.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>diffx</em>, <em>diffy</em><span class="sig-paren">)</span><a class="headerlink" href="#bomb_explosion.BombExplosion.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Move rect by (diffx, diffy).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bomb_explosion.BombExplosion.play_sound">
+<code class="descname">play_sound</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bomb_explosion.BombExplosion.play_sound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Play sound.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="bomb_explosion.BombExplosion.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#bomb_explosion.BombExplosion.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update sprite, moving it as necessary and changing the image based on time.</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-weapon"></span><p>File: weapon.py
+01/29/19</p>
+<dl class="class">
+<dt id="weapon.ChargingAnim">
+<em class="property">class </em><code class="descclassname">weapon.</code><code class="descname">ChargingAnim</code><span class="sig-paren">(</span><em>startx</em>, <em>starty</em>, <em>playerShip</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.ChargingAnim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sprite encapsulating the Charged Shot animation.</p>
+<dl class="method">
+<dt id="weapon.ChargingAnim.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>diffx</em>, <em>diffy</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.ChargingAnim.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the sprite rect by (diffx, diffy).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="weapon.ChargingAnim.update">
+<code class="descname">update</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#weapon.ChargingAnim.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Updates sprite based on whether the ship is still charging the weapon or not.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="weapon.Weapon">
+<em class="property">class </em><code class="descclassname">weapon.</code><code class="descname">Weapon</code><span class="sig-paren">(</span><em>weaponName</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.Weapon" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Weapon class is intended to be used by the Player class as well as the Enemy class.
+It will interact with the master_weapons_dict in order to give GUI the information it needs so
+that Bullet sprites can be constructed. Weapon also controls access to the bomb weapon function.</p>
+<dl class="method">
+<dt id="weapon.Weapon.blue_lazer">
+<code class="descname">blue_lazer</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.Weapon.blue_lazer" title="Permalink to this definition">¶</a></dt>
+<dd><p>blue_lazer is a starter weapon, similar in ability to level 1 spitfire</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="weapon.Weapon.bombs">
+<code class="descname">bombs</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.Weapon.bombs" title="Permalink to this definition">¶</a></dt>
+<dd><p>bombs are not typical weapons, they have 2 stages: stage 1 is the launch, where the bomb travels up the screen
+If the bomb doesn’t go off the edge of the screen during the launch stage,
+then it will explode (stage 2) dealing damage to all enemies on screen</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="weapon.Weapon.chargeShot">
+<code class="descname">chargeShot</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.Weapon.chargeShot" title="Permalink to this definition">¶</a></dt>
+<dd><p>chargeShot will “charge” (increment chargeShot timer) as the player holds down the fire key, and when the key is released
+a rapid stream of bullets will be shot continuosly until the chargeShot timer hits 0
+Leveling up this weapon will allow it to charge faster (increase the rate at which chargeShot timer increments)
+There is an animation that accompanies the chargeShot</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="weapon.Weapon.missle">
+<code class="descname">missle</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.Weapon.missle" title="Permalink to this definition">¶</a></dt>
+<dd><p>missile is an experimental weapon that uses advanced Movement</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="weapon.Weapon.spitfire">
+<code class="descname">spitfire</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.Weapon.spitfire" title="Permalink to this definition">¶</a></dt>
+<dd><p>spitfire is meant to be a general purpose weapon, with a high rof but low damage
+Leveling up spitfire will cause additional spitfire Bullets to fire at enemies</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="weapon.Weapon.spitfire2">
+<code class="descname">spitfire2</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.Weapon.spitfire2" title="Permalink to this definition">¶</a></dt>
+<dd><p>spitfire is meant to be a general purpose weapon, with a high rof but low damage
+Leveling up spitfire will cause additional spitfire Bullets to fire at enemies</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="weapon.Weapon.spitfire3">
+<code class="descname">spitfire3</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.Weapon.spitfire3" title="Permalink to this definition">¶</a></dt>
+<dd><p>spitfire is meant to be a general purpose weapon, with a high rof but low damage
+Leveling up spitfire will cause additional spitfire Bullets to fire at enemies</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="weapon.Weapon.waveBeam">
+<code class="descname">waveBeam</code><span class="sig-paren">(</span><em>origin_x</em>, <em>origin_y</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.Weapon.waveBeam" title="Permalink to this definition">¶</a></dt>
+<dd><p>waveBeam will shoot an expanding wave that deals high damage to enemies
+Leveling up waveBeam will increase damage dealt as well as rof</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="weapon.upgrade">
+<code class="descclassname">weapon.</code><code class="descname">upgrade</code><span class="sig-paren">(</span><em>item_pickup</em>, <em>current_weapon</em><span class="sig-paren">)</span><a class="headerlink" href="#weapon.upgrade" title="Permalink to this definition">¶</a></dt>
+<dd><p>This is a helper function that is used when a player picks up an weapon Item powerup
+The Player can run this upgrade function to determine if they should get a new Weapon,
+and which one it is. In order to use it: -item_pickup must be an Item object that is a weapon powerup
+and -current_weapon will be the name of the playerShip’s current weapon (easily found by weapon.name)</p>
+</dd></dl>
+
+<span class="target" id="module-levelLoader"></span><dl class="class">
+<dt id="levelLoader.LevelLoader">
+<em class="property">class </em><code class="descclassname">levelLoader.</code><code class="descname">LevelLoader</code><span class="sig-paren">(</span><em>startingLevelNumber=1</em><span class="sig-paren">)</span><a class="headerlink" href="#levelLoader.LevelLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>API to get level information for all the events starting at level1.json by default from the level folder.
+Can get ending or current loaded level, and all the of the sprites will get contructed and sent in a dictionary
+at the requested time, which can then be loaded into the GUI</p>
+<dl class="method">
+<dt id="levelLoader.LevelLoader.bulletClass">
+<code class="descname">bulletClass</code><span class="sig-paren">(</span><em>className</em><span class="sig-paren">)</span><a class="headerlink" href="#levelLoader.LevelLoader.bulletClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>contructs and returns enemy bullets off a 1 input nameing convention</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="levelLoader.LevelLoader.enemyClass">
+<code class="descname">enemyClass</code><span class="sig-paren">(</span><em>className</em><span class="sig-paren">)</span><a class="headerlink" href="#levelLoader.LevelLoader.enemyClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>contructs and returns enemies based off a 1 input nameing convention</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="levelLoader.LevelLoader.getEndBehavior">
+<code class="descname">getEndBehavior</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#levelLoader.LevelLoader.getEndBehavior" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns how the level can end</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="levelLoader.LevelLoader.getEvents">
+<code class="descname">getEvents</code><span class="sig-paren">(</span><em>levelTime</em><span class="sig-paren">)</span><a class="headerlink" href="#levelLoader.LevelLoader.getEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Will fetch all the events for the current time from
+level dictionary</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="levelLoader.LevelLoader.nextLevel">
+<code class="descname">nextLevel</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#levelLoader.LevelLoader.nextLevel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Attempts to load the next level, if success returns True, else False</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-levelLibrary"></span><p>Contains all the dependent shared code between levelMaker.py and levelLoader.py JSON checker tool and enemy 
+spawn dictionaries dictionary, as well as an enemy simple contruct language to uniquely create enemy entities dynamically</p>
+<dl class="function">
+<dt id="levelLibrary.PROPER_FORMAT">
+<code class="descclassname">levelLibrary.</code><code class="descname">PROPER_FORMAT</code><span class="sig-paren">(</span><em>a</em><span class="sig-paren">)</span><a class="headerlink" href="#levelLibrary.PROPER_FORMAT" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks enemy simple constructis properly formated</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="levelLibrary.cluster">
+<code class="descclassname">levelLibrary.</code><code class="descname">cluster</code><span class="sig-paren">(</span><em>selection='full'</em>, <em>b='db'</em>, <em>s=3</em>, <em>h=1</em>, <em>d='DTcommon'</em><span class="sig-paren">)</span><a class="headerlink" href="#levelLibrary.cluster" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this function in levelMaker to create clusters of enemy, b=behavior must be in levelMaker dictionary
+s=speed, 
+h=health. 
+Selections to choose from are:
+“full”- creates enemies with atributes in all sectors
+“L3-L5”- creates left most 3 4 or 5 enenmies
+“R3-R5”- creates right most 3 5 or 5 enemies
+“M3-M5” - middle sectors 3 4 or 5 enemies
+“ML3-ML5” - middle Left sectors 3 4 or 5 enemies
+“MR3-MR5” - middle Right sectors 3 4 or 5 enemies</p>
+</dd></dl>
+
+<span class="target" id="module-library"></span><dl class="function">
+<dt id="library.draw_bombs_remaining">
+<code class="descclassname">library.</code><code class="descname">draw_bombs_remaining</code><span class="sig-paren">(</span><em>bombs_remaining</em>, <em>topleft_corner=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#library.draw_bombs_remaining" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a graphical representation of the number of player bombs remaining. Takes in an integer for the bombs_remaining, and a topleft_corner (x,y) tuple
+if you want to move the location in place (instead of after getting the surface and rect back).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.draw_boss_bar">
+<code class="descclassname">library.</code><code class="descname">draw_boss_bar</code><span class="sig-paren">(</span><em>width</em>, <em>height</em>, <em>health_percent</em>, <em>shield_percent</em>, <em>topleft_corner=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#library.draw_boss_bar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a vertical rectangle with (width,height) dimensions and the topleft corner at topleft_corner.
+bar_percentage will accept a float between 0 and 1 for the amount of the bar to fill it (0.6 will still
+draw a border around the entire bar, but only fill 60% with solid color). Returns the surface and its rect to blit.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.draw_button">
+<code class="descclassname">library.</code><code class="descname">draw_button</code><span class="sig-paren">(</span><em>text</em>, <em>text_color=(0</em>, <em>0</em>, <em>0)</em>, <em>bg_color=None</em>, <em>topleft_corner=(0</em>, <em>0)</em>, <em>bold=False</em><span class="sig-paren">)</span><a class="headerlink" href="#library.draw_button" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a button utilizing draw_text(), then sets its rect’s location via topleft_corner. Pass bold=True if you wish to have the text in bold.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.draw_instructions">
+<code class="descclassname">library.</code><code class="descname">draw_instructions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#library.draw_instructions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws helper instructions and returns the surface with all of the text pre-blitted.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.draw_player_lives">
+<code class="descclassname">library.</code><code class="descname">draw_player_lives</code><span class="sig-paren">(</span><em>player_lives</em>, <em>topleft_corner=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#library.draw_player_lives" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a graphical representation of the number of player lives remaining. Takes in an integer for the player_lives, and a topleft_corner (x,y) tuple
+if you want to move the location in place (instead of after getting the surface and rect back).</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.draw_text">
+<code class="descclassname">library.</code><code class="descname">draw_text</code><span class="sig-paren">(</span><em>to_print</em>, <em>text_color</em>, <em>bg_color=None</em>, <em>text_size=25</em>, <em>bold=False</em><span class="sig-paren">)</span><a class="headerlink" href="#library.draw_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws the string to_print in the color defined by text_color (can be a defined constant, or an RGB value triple)
+with background color defined by bg_color. If bg_color=None, then no background fill is used. Returns a surface with text
+rendered to it.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.draw_vertical_bar">
+<code class="descclassname">library.</code><code class="descname">draw_vertical_bar</code><span class="sig-paren">(</span><em>color</em>, <em>width</em>, <em>height</em>, <em>bar_percentage=1</em>, <em>topleft_corner=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#library.draw_vertical_bar" title="Permalink to this definition">¶</a></dt>
+<dd><p>Draws a vertical rectangle with (width,height) dimensions and the topleft corner at topleft_corner.
+bar_percentage will accept a float between 0 and 1 for the amount of the bar to fill it (0.6 will still
+draw a border around the entire bar, but only fill 60% with solid color). Returns the surface and its rect to blit.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.loadGame">
+<code class="descclassname">library.</code><code class="descname">loadGame</code><span class="sig-paren">(</span><em>stateName='game.sav'</em><span class="sig-paren">)</span><a class="headerlink" href="#library.loadGame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Loads file pointed at by stateName and proceeds to unpickle it. Returns that list to calling function.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.load_background_music">
+<code class="descclassname">library.</code><code class="descname">load_background_music</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#library.load_background_music" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accepts a filename and will attempt to load that file as background music, repeated infinitely.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.load_sound">
+<code class="descclassname">library.</code><code class="descname">load_sound</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#library.load_sound" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accepts a file name and attempts to load it. If pygame.mixer has not been initialized yet, 
+raises an exception. Will throw an exception if the file is not found.
+Returns a pygame.Sound object that can be used.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.load_text">
+<code class="descclassname">library.</code><code class="descname">load_text</code><span class="sig-paren">(</span><em>filename</em><span class="sig-paren">)</span><a class="headerlink" href="#library.load_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accepts a path to a filename. Returns the text contents of the file as a line-by-line list.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="library.saveGame">
+<code class="descclassname">library.</code><code class="descname">saveGame</code><span class="sig-paren">(</span><em>array</em>, <em>stateName='game.sav'</em><span class="sig-paren">)</span><a class="headerlink" href="#library.saveGame" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pickles array and saves it to filename given in stateName.</p>
+</dd></dl>
+
+<span class="target" id="module-movement"></span><dl class="class">
+<dt id="movement.Move">
+<em class="property">class </em><code class="descclassname">movement.</code><code class="descname">Move</code><span class="sig-paren">(</span><em>moveCountArray=[800], vectorAray=[['x', 3, 0]], repeat=3</em><span class="sig-paren">)</span><a class="headerlink" href="#movement.Move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Purpose: describes movement patterns that enemies and items can have</p>
+<p>Ideas: go down, left, right, up, circle, spiral, slow start then speed up, up and down</p>
+<dl class="method">
+<dt id="movement.Move.update">
+<code class="descname">update</code><span class="sig-paren">(</span><em>spriteObject</em><span class="sig-paren">)</span><a class="headerlink" href="#movement.Move.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>updates sprites coordinates based off contructed move sets returns and updated object which can be put in
+a GUI</p>
+</dd></dl>
+
+</dd></dl>
+
+<span class="target" id="module-AssetLoader"></span><dl class="class">
+<dt id="AssetLoader.AssetLoader">
+<em class="property">class </em><code class="descclassname">AssetLoader.</code><code class="descname">AssetLoader</code><a class="headerlink" href="#AssetLoader.AssetLoader" title="Permalink to this definition">¶</a></dt>
+<dd><p>A structure meant to assist with constant loading/reloading of sprites. Allows any sprite class to query for a given filename,
+and if that file has been accessed before, it serves it up without having to go to the disk again. So while any given level may have thousands
+of sprites (especially if you’re trigger happy) each sprite type (player, enemy, bullet, etc) is only incurring the cost of a single trip to the
+disk.</p>
+<dl class="method">
+<dt id="AssetLoader.AssetLoader.getAsset">
+<code class="descname">getAsset</code><span class="sig-paren">(</span><em>name</em><span class="sig-paren">)</span><a class="headerlink" href="#AssetLoader.AssetLoader.getAsset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Accepts an OS path or path-like string, returns that filename’s sprite surface and rectangle.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">Day0 - Another Raiden Clone</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Max Geiszler, Greg Norton, Chris Norine.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
